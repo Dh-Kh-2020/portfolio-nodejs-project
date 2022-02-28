@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="The portfolio of Dhoha Alkhorasani, Full stack web developer.">
+    <meta name="Keywords" content="Dhoha Alkhorasani developer full stack web product software app design portfolio Rwad Coding Academy Taiz Univesity Collage of engineering and information technology">
+
+    <title> <%#= title %> Dhoha Alkhorasani | Personal Profile </title>
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+    <!-- <link rel="stylesheet" href="css/all.css" type="text/css" media="screen"> -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <!-- ==== HEADER ==== -->
+    <%- include('../component/header.ejs') %>
+    <!-- ==== END HEADER ==== -->
+
+    <!-- ==== MAIN ==== -->
+    <main>
+
+        <!-- === HOME === -->
+        <section class="home" id="home">
+            <div>
+                <h2 class="home-heading">Hi, I'm Dhoha <br><span>Full Stack Developer</span></h2>
+                <p class="home-description">High level experience in experience in web design and development, producing quality work.</p>
+                <a href="#skills" class="main-btn">View my skills <i class="uil uil-arrow-right"></i></a>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/dhoha.alkhorasani/"><i class="uil uil-facebook-f"></i></a>
+                    <a href="https://github.com/Dh-Kh-2020"><i class="uil uil-github-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="home-img" id="scroll-image">
+                <?xml version="1.0" standalone="no"?>
+                <svg class="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M62.8,-60.3C78.7,-47,86.9,-23.5,86.6,-0.2C86.4,23,77.7,46,61.9,60.3C46,74.6,23,80.1,5.6,74.6C-11.9,69,-23.7,52.3,-34.3,38C-44.8,23.7,-54,11.9,-57.9,-3.9C-61.8,-19.7,-60.4,-39.3,-49.9,-52.7C-39.3,-66,-19.7,-73,1.9,-74.9C23.5,-76.8,47,-73.7,62.8,-60.3Z" transform="translate(100 100)" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path d="M62.8,-60.3C78.7,-47,86.9,-23.5,86.6,-0.2C86.4,23,77.7,46,61.9,60.3C46,74.6,23,80.1,5.6,74.6C-11.9,69,-23.7,52.3,-34.3,38C-44.8,23.7,-54,11.9,-57.9,-3.9C-61.8,-19.7,-60.4,-39.3,-49.9,-52.7C-39.3,-66,-19.7,-73,1.9,-74.9C23.5,-76.8,47,-73.7,62.8,-60.3Z" transform="translate(100 100)" />
+                        <image class="home-blob-img test" xlink:href="imgs/1613567929-3.jpg" />
+                        <!-- <image class="home-blob-img test" xlink:href="imgs/istockphoto-1224664031-612x612.png" />
+                        <image class="home-blob-img test" xlink:href="imgs/programming-software-website-application-development-260nw-1906683778-2.png" /> -->
+                    </g>
+                </svg>
+                <!-- <img src="imgs/1613567929-1.jpg"> -->
+                <!-- <script>
+                    startImageTransition();
+                    function startImageTransition() {
+                        var images = document.getElementsByClassName("test");
+                        for (var i = 0; i < images.length; ++i) {
+                            images[i].style.opacity = 1;
+                        }
+                        var top = 1;
+                        var cur = images.length - 1;
+                        setInterval(changeImage, 3000);
+                        async function changeImage() {
+                            var nextImage = (1 + cur) % images.length;
+                            images[cur].style.zIndex = top + 1;
+                            images[nextImage].style.zIndex = top;
+                            await transition();
+                            images[cur].style.zIndex = top;
+                            images[nextImage].style.zIndex = top + 1;
+                            top = top + 1;
+                            images[cur].style.opacity = 1;
+                            cur = nextImage;
+                        }
+
+                        function transition() {
+                            return new Promise(function(resolve, reject) {
+                                var del = 0.01;
+
+                                var id = setInterval(changeOpacity, 10);
+
+                                function changeOpacity() {
+                                    images[cur].style.opacity -= del;
+                                    if (images[cur].style.opacity <= 0) {
+                                        clearInterval(id);
+                                        resolve();
+                                    }
+                                }
+                            })
+                        }
+                    }
+                </script> -->
+            </div>
+        </section>
+        <!-- === END HOME === -->
+
+        <!-- === ABOUT === -->
+        <section class="section about" id="about">
+            <img src="imgs/istockphoto-1224664031-612x612.png" class="about-img">
+            <div class="data">
+                <h2 class="title about-titl">About Me</h2>
+                <p class="description">
+                    Web developer, with extensive knowledge and years of experience.<br>
+                    Working in web technologies -- frontend and backend, delivering quality work.<br><br>
+                    <span class="experience">03 </span> years experience<br>
+                    <span class="experience">03+ </span> projects completed<br>
+                    <span class="experience">04 </span> componies worked<br>
+                </p>
+
+                <div class="about-buttons">
+                    <a download="" href="pdf/Dhoha-cv.pdf" class="button button--flex">
+                        Download CV<i class="uil uil-import button-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section> 
+        <!-- skills -->
+        <section class="section skills" id="skills">
+            <div class="data">
+                <h2 class="title about-titl">My Skills</h2>
+                <p class="description">
+                    My technical level.<br>
+                    <p><span class="experience">Frontend developing </span><br> More than 3 years </p>
+                    
+                    <div class="skills-list">
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">HTML</h3>
+                                <span class="skill-number">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-html"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">CSS</h3>
+                                <span class="skill-number">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-css"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">JavaScript</h3>
+                                <span class="skill-number">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-js"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">SASS</h3>
+                                <span class="skill-number">45%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-sass"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><span class="experience">Backend developing </span><br> 2 years </p>
+
+                    <div class="skills-list">
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">PHP</h3>
+                                <span class="skill-number">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-php"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">Python</h3>
+                                <span class="skill-number">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-python"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">Laravel</h3>
+                                <span class="skill-number">40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-laravel"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills-data">
+                            <div class="skills-title">
+                                <h3 class="skill-name">Node js</h3>
+                                <span class="skill-number">45%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skills-percentage skills-node"></span>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <img src="imgs/programming-software-website-application-development-260nw-1906683778-2.png" class="about-img">
+        </section>
+        <!-- === END ABOUT === -->
+
+        <!-- === SERVICES === -->
+        <section class="section" id="services" >
+            <h2 class="title center-title">Services</h2>
+            <div class="content">
+                
+            </div>
+        </section> 
+        <!-- === END SERVICES === -->
+
+        <!-- === CONTACT === -->
+        <section class="section contact" id="contact" >
+
+            <div class="card"> 
+                <div class="cont-head">
+                    <div class="icon">
+                        <i class="uil uil-envelope-alt"></i>
+                    </div>   
+                    <h2 class="title center-title">Contact me </h2>
+                </div>
+                <div id="error_message"></div>
+                <form action="/" class="contact-form" id="myform" onsubmit = "return validate();">
+                    <input type="text" name="username" id="username" placeholder="Your Name">
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <textarea name="msg" id="msg" placeholder="Your Massege"></textarea><br>
+                    <input type="submit" value="Send">
+                </form>
+            </div>    
+            <script ></script>
+        </section>
+        <!-- === END CONTACT === -->
+        
+    </main>
+    <!-- ==== END MAIN ==== -->
+
+    <!-- ==== FOOTER ==== -->
+    <%- include('../component/footer.ejs') %>
+    <!-- ==== END FOOTER ==== -->
+</body>
+</html>
