@@ -1,30 +1,33 @@
 const DB = require('../DB/connection');
 
 /**************** Custom Validation *****************/
-var skillTitleValidator = [
+var serviceTitleValidator = [
     validate({
         validator: 'isLength',
         arguments: [3, 30],
-        message: 'Skill title have to be >= 3 and <= 30 of characters'
+        message: 'Service title have to be >= 3 and <= 30 of characters'
     })
 ];
-
 /*************** /Custom Validation *****************/
 
-
-/**************** Skills Schema ****************/
-const skills = new DB.Schema({
+/**************** Services Schema ****************/
+const services = new DB.Schema({
     title: {
         type: String,
         required: true,
-        validate: skillTitleValidator
+        validate: serviceTitleValidator
     },
-    precentage: {
-        type: Number,
+    image: {
+        type: String,
         required: true,
+    },
+
+    description: {
+        type: String
     },
 
     is_active: Boolean
 });
 
-module.exports = DB.model("skills", skills);
+
+module.exports = DB.model("services", services);

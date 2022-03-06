@@ -1,18 +1,36 @@
-const mongoose = require('mongoose');
+const DB = require('../DB/connection');
 
-const works_schema = new mongoose.Schema(
-    {
-        work_title: {
-            type: String
-        },
-        work_info: {
-            type: String
-        },
-        is_active: {
-            type: Boolean
-        }
-    }
-);
+/**************** Custom Validation *****************/
+var workTitleValidator = [
+    validate({
+        validator: 'isLength',
+        arguments: [3, 30],
+        message: 'Work title have to be >= 3 and <= 30 of characters'
+    })
+];
+/*************** /Custom Validation *****************/
 
-const works = mongoose.model('works', works_schema);
-module.exports = works;
+/**************** Previous Works Schema ****************/
+const works = new DB.Schema({
+    title: {
+        type: String,
+        required: true,
+        validate: workTitleValidator
+    },
+    image: {
+        type: String,
+        required: true,
+    },
+
+    description: {
+        type: String
+    },
+
+    liveDemo: {
+        type: String
+    },
+
+    is_active: Boolean
+});
+
+module.exports = DB.model("works", works);
